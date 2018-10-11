@@ -36,7 +36,6 @@ public class PartyRoomActivity extends AppCompatActivity {
             public void onClick(View v) {
                 //AgoraManager里面封装了挂断的API, 退出频道
                 AgoraManager.getInstance().leaveChannel();
-                finish();
             }
         });
 
@@ -70,6 +69,7 @@ public class PartyRoomActivity extends AppCompatActivity {
 
         @Override
         public void onLeaveChannelSuccess() {
+            finish();
         }
 
         @Override
